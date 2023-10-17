@@ -4,16 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ohmyfood</title>
-    <link rel="stylesheet" href="./css/style.scss">
+    <link rel="stylesheet" href="./css/style2.scss">
 	<script src="https://kit.fontawesome.com/1351cc289b.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
 </head>
     <body>
         <header>
-            <div class="titre"><img class="logo" src="./images/logo/ohmyfood.png" alt="logo du site"></div>
-            <div class="location"><i class="fa-solid fa-location-dot"></i>Paris, Belleville</div>
+            <div class="titre"><a class="return" href="index.html"><i class="fa-solid fa-arrow-left"></i></a><img class="logo" src="./images/logo/ohmyfood.png" alt="logo du site"></div>
+            <img class="header_img" src="./images/restaurants/france.jpg" alt="Imade de présentation avec le service d'un plat du restaurant">
         </header>
-        <section>
-            
+        <section class="carte-menu">
+            <h2>À la française<i class="fa-solid fa-heart"></i></h2>
+            <div class="carte-part">
+                <h3>ENTRÉES</h3>
+                <div class="proposition">
+                    <div class="description">
+                        <h4>Tartare de poulpe acidulé</h4>
+                        <p>Aux zestes d'orange</p>
+                        <h4 class="prix">25€</4>
+                    </div>
+                </div>
+                <div class="proposition">
+                    <div class="description">
+                        <h4>Velouté de légumes d'antan</h4>
+                        <p>Carotte, panais, topinambour</p>
+                        <h4 class="prix">35€</4>
+                    </div>
+                </div>
+                <div class="proposition">
+                    <div class="description">
+                        <h4>Soupe à l'oignon</h4>
+                        <p>Revisitée</p>
+                        <h4 class="prix">20€</4>
+                    </div>
+                </div>
+            </div>
+            <div class="carte-part">
+                <h3>PLATS</h3>
+                <div class="proposition">
+                    <div class="description">
+                        <h4>Coquilles Saint-Jacques</h4>
+                        <p>Accompagnées d'une purée de panais</p>
+                        <h4 class="prix">40€</4>
+                    </div>
+                </div>
+                <div class="proposition">
+                    <div class="description">
+                        <h4>Magret de canard</h4>
+                        <p>Et parmentier de pommes de terre</p>
+                        <h4 class="prix">35€</4>
+                    </div>
+                </div>
+                <div class="proposition">
+                    <div class="description">
+                        <h4>Pigeonneau d’Ille-et-Vilaine</h4>
+                        <p>Sur son lit de gnocchis aux légumes</p>
+                        <h4 class="prix">44€</4>
+                    </div>
+                </div>
+            </div>
+            <div class="carte-part">
+                <h3>DESSERT</h3>
+                <div class="proposition">
+                    <div class="description">
+                        <h4>Pétales de violettes glacés</h4>
+                        <p>Et purée de noisettes</p>
+                        <h4 class="prix">18€</4>
+                    </div>
+                </div>
+                <div class="proposition">
+                    <div class="description">
+                        <h4>Fondant au chocolat</h4>
+                        <p>Revisité</p>
+                        <h4 class="prix">22€</4>
+                    </div>
+                </div>
+                <div class="proposition">
+                    <div class="description">
+                        <h4>Millefeuille croustillant </h4>
+                        <p>Myrtilles et pâte d’amande</p>
+                        <h4 class="prix">23€</4>
+                    </div>
+                </div>
+            </div>
         </section>
+        <footer>
+            <div class="foot_logo"><img class="logo-mini" src="./images/logo/ohmyfood.png" alt="logo miniature du site"></div>
+            <ul class="foot_ul">
+                <li class="foot-menu"><a href=""><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
+                <li class="foot-menu"><a href=""><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
+                <li class="foot-menu"><a href="">Mentions légales</a></li>
+                <li class="foot-menu"><a href="">Contact</a></li>
+            </ul>
+        </footer>
     </body>
 </html>
