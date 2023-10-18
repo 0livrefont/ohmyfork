@@ -53,6 +53,9 @@ h3 {
 h4 {
     margin: 0;
     font-size: 18px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 p {
@@ -60,6 +63,9 @@ p {
     font-weight: lighter;
     font-size: 15px;
     width: 80%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 a {
@@ -156,8 +162,10 @@ padding-bottom: 5px;
     padding: 10px 0 10px 10px;
     margin: 10px 0;
     width: 97%;
-    height: 69px;
+    height: 70px;
+    box-sizing: border-box;
 }
+
 
 .description {
     width: 100%;
@@ -169,6 +177,13 @@ padding-bottom: 5px;
 .plat {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    &:hover + .prix {
+        margin-right: 0;
+    }
 }
 
 .prix {
@@ -176,9 +191,18 @@ padding-bottom: 5px;
     flex-shrink: 0;
     display: flex;
     font-size: 15px;
-    width: 20%;
+    width: 23%;
     align-items: center;
+    margin-right: -45px;
+    transition-duration : 400ms;
+    order: 2;
 }
+
+
+.montant {
+    margin-left: -5px;
+}
+
 
 /*footer*/
 
