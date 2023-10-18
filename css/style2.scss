@@ -113,6 +113,29 @@ padding-bottom: 5px;
     }
 }
 
+.fa-solid.fa-check {
+    background-color: #FFFFFF;
+    padding: 5px;
+    border-radius: 50%;
+    color: #99E2D0;
+    font-size: 10px;
+    transition: transform .4s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.valid {
+    background-color: #99E2D0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    transition: margin-right .4s ease-in-out;
+    height: 100px;
+}
+
+
 
 /*Menu*/
 
@@ -130,15 +153,22 @@ padding-bottom: 5px;
     background-color: #FFFFFF;
     height: 50px;
     flex-wrap: wrap;
-    padding: 10px;
+    padding: 10px 0 10px 10px;
     margin: 10px 0;
+    width: 97%;
+    height: 69px;
 }
 
 .description {
     width: 100%;
     height: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.plat {
+    display: flex;
+    flex-direction: column;
 }
 
 .prix {
@@ -146,9 +176,8 @@ padding-bottom: 5px;
     flex-shrink: 0;
     display: flex;
     font-size: 15px;
-    text-align: right;
-    justify-content: flex-end;
     width: 20%;
+    align-items: center;
 }
 
 /*footer*/
