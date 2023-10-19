@@ -42,8 +42,6 @@ button {
         }
 }
 
-
-
 h2 {
     margin: 10px 25px;
 }
@@ -62,14 +60,26 @@ a {
 
 .fa-solid {
     color: #353535;
-    padding: 15px;
-        &:hover {
-            color: #9356DC;
-        }
-        
+    display: contents;
+    padding: 0 10px;
+}
+
+.fa-regular {
+    color: #353535;
+    display: contents;
+    transition: display .4s ease;
 }
 
 .fa-regular:hover {
+    color: #9356DC;
+}
+
+.fa-regular:active {
+    display: none;
+}
+
+.fa-regular:active + .fa-solid.fa-heart {
+    display: contents;
     color: #9356DC;
 }
 
@@ -78,6 +88,7 @@ a {
     font-weight: bold;
     font-size: 16px;
     background-color: #EAEAEA;
+    padding: 10px 0;
 }
 
 .fa-mobile-screen-button {
@@ -90,6 +101,10 @@ a {
 
 .fa-store {
     color: #7E7E7E;
+}
+
+.fa-solid.fa-heart {
+    display: none;
 }
 
 .logo {
@@ -266,6 +281,59 @@ footer {
 }
 
 
+@media (min-width: 1112.98px) {
+
+ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+li {
+    width: 335px;
+}
+
+.card-container {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding: 0;
+}
+
+.card {
+    width: 490px;
+}
+
+.new {
+    margin: 10px 0 0 32%;
+}
+
+footer {
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.foot_ul {
+    width: auto;
+    margin-right: 30px;
+}
+
+.foot-menu {
+    padding: 5px 15px;
+    justify-content: right;
+    width: auto;
+}
+
+}
+
+
+
 //Variable
 
 $bg-color: #F3F3F3;
@@ -273,3 +341,5 @@ $1-color: #9356DC;
 $2-color: #99E2D0;
 $sub-color: #FFFFFF;
 $f-color: #353535;
+
+

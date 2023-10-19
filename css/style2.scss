@@ -80,6 +80,29 @@ a {
     padding: 15px;
 }
 
+.fa-heart {
+    display: none;
+}
+
+.fa-regular {
+    color: #353535;
+    display: contents;
+    transition: display .4s ease;
+}
+
+.fa-regular:hover {
+    color: #9356DC;
+}
+
+.fa-regular:active {
+    display: none;
+}
+
+.fa-regular:active + .fa-solid.fa-heart {
+    display: contents;
+    color: #9356DC;
+}
+
 .logo {
     margin: 20px 0 10px 0;
     width: 200px;
@@ -166,7 +189,6 @@ padding-bottom: 5px;
     box-sizing: border-box;
 }
 
-
 .description {
     width: 100%;
     height: 100%;
@@ -184,6 +206,9 @@ padding-bottom: 5px;
     &:hover + .prix {
         margin-right: 0;
     }
+    &:active + .prix {
+        margin-right: 0;
+    }
 }
 
 .prix {
@@ -197,7 +222,6 @@ padding-bottom: 5px;
     transition-duration : 400ms;
     order: 2;
 }
-
 
 .montant {
     margin-left: -5px;
@@ -228,6 +252,66 @@ footer {
         padding: 0 10px 0 0;
         color: #FFFFFF;
     }
+}
+
+
+@media (min-width: 1112.98px) {
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -30px 10% 0 10%;
+}
+
+.proposition {
+    width: 635px;
+}
+
+.header_img {
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+}
+
+footer {
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.foot_ul {
+    width: auto;
+    margin-right: 30px;
+}
+
+.foot-menu {
+    padding: 5px 15px;
+    justify-content: right;
+    width: auto;
+}
+
+ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+li {
+    width: 33px;
+}
+
+.valid {
+    width: 100px;
+}
+
+.montant {
+    margin-left: 50px;
+}
 }
 
 //Variable
