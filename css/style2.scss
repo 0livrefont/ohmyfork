@@ -33,11 +33,18 @@ button {
     width: auto;
     font-weight: bold;
     color: #F3F3F3;
-    background-color: #9356DC;
+    background: linear-gradient(#FF79DA, #9356DC);
     border-radius: 30px;
     border: none;
-    padding: 15px;
-    filter: drop-shadow (0px 5px 4px #00000026)
+    padding: 15px 30px;
+    margin: 10px;
+    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.25);
+    align-content: center;
+    text-align: center;
+        &:hover {
+            box-shadow: 0px 3px 8px 2px rgba(0,0,0,0.25);
+            background: linear-gradient(#FF79DA, #9356DC 90%);
+        }
 }
 
 h2 {
@@ -84,23 +91,30 @@ a {
     display: none;
 }
 
-.fa-regular {
+.fa-solid {
     color: #353535;
     display: contents;
-    transition: display .4s ease;
 }
 
-.fa-regular:hover {
-    color: #9356DC;
-}
-
-.fa-regular:active {
+input[type="checkbox"].fa-solid {
     display: none;
 }
 
-.fa-regular:active + .fa-solid.fa-heart {
-    display: contents;
-    color: #9356DC;
+input[type="checkbox"].fa-solid + label::before {
+    font-family: "Font Awesome 5 Free";
+    color: #353535;
+    margin: 0 0.5rem;
+    transition: all 0.8s ease;
+}
+
+input[type="checkbox"].fa-solid:checked + label::before {
+    background: linear-gradient(to bottom, #FF79DA, #9356DC 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+input[type="checkbox"].fa-solid.fa-heart + label::before {
+    content: '\f004';
 }
 
 .logo {
@@ -206,10 +220,32 @@ padding-bottom: 5px;
     &:hover + .prix {
         margin-right: 0;
     }
-    &:active + .prix {
+    &:selected + .prix {
         margin-right: 0;
     }
 }
+
+/*input[type="checkbox"].plat {
+    display: none;
+}
+
+input[type="checkbox"].plat + label::before {
+    font-family: "Font Awesome 5 Free";
+    color: #353535;
+    margin: 0 0.5rem;
+    transition: all 0.8s ease;
+}
+
+input[type="checkbox"].fa-solid:checked + label::before {
+    background: linear-gradient(to bottom, #FF79DA, #9356DC 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+}
+
+input[type="checkbox"].fa-solid.fa-heart + label::before {
+    content: '\f004';
+} */
 
 .prix {
     margin-left: auto;

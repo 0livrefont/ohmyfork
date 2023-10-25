@@ -64,24 +64,38 @@ a {
     padding: 0 10px;
 }
 
-.fa-regular {
+.fa-regular .fa-hearth {
     color: #353535;
     display: contents;
     transition: display .4s ease;
+    margin: 0 0 0 600px;
 }
 
 .fa-regular:hover {
     color: #9356DC;
 }
 
-.fa-regular:active {
+input[type="checkbox"].fa-solid {
     display: none;
 }
 
-.fa-regular:active + .fa-solid.fa-heart {
-    display: contents;
-    color: #9356DC;
+input[type="checkbox"].fa-solid + label::before {
+    font-family: "Font Awesome 5 Free";
+    color: #353535;
+    margin: 0 0.5rem;
+    transition: all 0.8s ease;
 }
+
+input[type="checkbox"].fa-solid:checked + label::before {
+    background: linear-gradient(to bottom, #FF79DA, #9356DC 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+}
+
+input[type="checkbox"].fa-solid.fa-heart + label::before {
+    content: '\f004';
+} 
 
 .location {
     color: #353535;
