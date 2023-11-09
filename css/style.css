@@ -23,6 +23,7 @@ section {
   background-color: #F3F3F3;
   padding: 40px 0;
 }
+
 section h1 {
   margin: 0 40px 0 20px;
 }
@@ -267,6 +268,13 @@ li {
   margin: -50px 10px 20px 0;
 }
 
+.new-container {
+  width: 90%;
+  height: 33%;
+  position: absolute;
+  display: inline-grid;
+}
+
 .new {
   color: #008766;
   background-color: #99E2D0;
@@ -274,9 +282,10 @@ li {
   padding: 5px;
   position: absolute;
   z-index: 1;
-  margin: 10px 0 0 62%;
+  margin: 20px 20px 0 0;
   font-weight: bold;
   font-size: 14px;
+  justify-self: end;
 }
 
 /*footer*/
@@ -319,6 +328,9 @@ footer {
 @media (min-width: 1112.98px) {
   h2 {
     margin: 0 0 25px 110px;
+    display: flex;
+    align-items: start;
+    width: 90%;  
   }
   ul {
     width: 100%;
@@ -331,26 +343,30 @@ footer {
     width: 335px;
   }
   .card-container {
-    width: 70%;
+    max-width: 1440px;
     flex-wrap: wrap;
     justify-content: space-evenly;
     flex-direction: row;
     padding: 0;
     gap: 60px;
   }
-
   .restaurants {
     align-items: center;
   }
-
+  .fonctionnement {
+   align-items: center;
+  }
   .card {
     width: 490px;
   }
   .card-loving {
     margin: -48px 10px 20px 0;
   }
+  .new-container {
+    display: flex;
+  }
   .new {
-    margin: 10px 0 0 29%;
+    margin: 10px 0 0 410px;
   }
   footer {
     padding-bottom: 0;
