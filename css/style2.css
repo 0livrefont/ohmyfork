@@ -5,7 +5,7 @@
 
 body {
   justify-content: center;
-  background-color: #F3F3F3;
+  background-color: white;
   margin: 0;
 }
 
@@ -37,7 +37,7 @@ button {
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 30px;
   border: none;
-  padding: 15px 30px;
+  padding: 2% 5%;
   margin: 10px;
   box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
   align-content: center;
@@ -82,38 +82,68 @@ a {
 }
 
 /*Détails*/
-.fa-regular {
-  padding: 15px;
-}
-
-.fa-heart {
-  display: contents;
-}
 
 .fa-solid {
   color: #353535;
+  display: contents;
   padding: 15px;
+  transition: all 2s ease-in-out;
 }
 
-input[type=checkbox].fa-regular {
-  display: none;
-}
-
-input[type=checkbox].fa-regular + label::before {
-  font-family: "Font Awesome 5 Free";
+.fa-regular .fa-hearth {
   color: #353535;
-  margin: 0 0.5rem;
-  transition: all 0.8s ease;
+  display: contents;
+  transition: display 2s ease-in-out;
+  margin: 0 0 0 600px;
 }
 
-input[type=checkbox].fa-regular:checked + label::before {
+.fa-regular:hover {
+  color: #9356DC;
+  transition: all 2s ease-in-out;
+}
+
+input[type=checkbox].fa-solid {
+  display: none;
+  transition: all 2s ease-in-out;
+}
+
+input[type=checkbox].fa-solid + label::before {
+  font-family: "Font Awesome 5 Free";
+  -webkit-text-stroke: 1px black;
+  color: white;
+  margin: 0 15px;
+  transition: all 2s ease-in-out;
+}
+
+input[type=checkbox].fa-solid:hover + label::before {
   background: linear-gradient(to bottom, #FF79DA, #9356DC 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 1;
+  transition: all 2s ease-in-out;
 }
 
-input[type=checkbox].fa-regular.fa-heart + label::before {
+input[type=checkbox].fa-solid:checked + label::before {
+  background: linear-gradient(to bottom, #FF79DA, #9356DC 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px black;
+  opacity: 1;
+  transition: all 2s ease-in-out;
+}
+
+input[type=checkbox].fa-solid.fa-heart + label::before {
   content: "\f004";
+  transition: all 2s ease-in-out;
+}
+
+input[type=checkbox].fa-solid:unchecked + label::before {
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px black;
+  opacity: 1;
+  transition: all 2s ease-in-out;
 }
 
 .logo {
@@ -221,7 +251,7 @@ li {
 
 input[type=checkbox].plat {
   opacity: 0;
-  width: 640px;
+  width: 98%;
   height: 70px;
   float: inherit;
   position: static;
@@ -240,7 +270,6 @@ input[type=checkbox].plat:checked + .prix {
   flex-shrink: 0;
   display: flex;
   font-size: 15px;
-  width: 23%;
   align-items: center;
   margin-right: -45px;
   transition-duration: 400ms;
@@ -285,8 +314,9 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: -30px 10% 0 10%;
-  }
+    margin: -40px 10% 0 10%;
+    max-width: 1440px;
+    }
   label {
     margin-left: 10px;
   }
@@ -325,11 +355,17 @@ footer {
   li {
     width: 33px;
   }
-  .valid {
-    width: 100px;
+  input[type="checkbox"].plat {
+    width: 635px;
   }
+  .valid {
+    width: 85px;
+    }
   .montant {
     margin-left: 50px;
+  }
+  button {
+    padding: 15px 30px;
   }
 }
 /*
@@ -339,5 +375,4 @@ $bg-color: #F3F3F3;
 $1-color: #9356DC;
 $2-color: #99E2D0;
 $sub-color: #FFFFFF;
-$f-color: #353535;
-*//*# sourceMappingURL=style2.css.map */
+$f-color: #353535;*/
