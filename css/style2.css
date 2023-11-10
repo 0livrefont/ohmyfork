@@ -112,38 +112,32 @@ input[type=checkbox].fa-solid + label::before {
   -webkit-text-stroke: 1px black;
   color: white;
   margin: 0 15px;
-  transition: all 2s ease-in-out;
+  padding: 1px;
+  transition: all 2s ease-out;
+  opacity: 1;
 }
 
 input[type=checkbox].fa-solid:hover + label::before {
   background: linear-gradient(to bottom, #FF79DA, #9356DC 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  opacity: 1;
-  transition: all 2s ease-in-out;
+  -webkit-text-stroke: 1px #ffffff00;
+  transition: all 450ms ease;
+  padding: 1px;
 }
 
 input[type=checkbox].fa-solid:checked + label::before {
   background: linear-gradient(to bottom, #FF79DA, #9356DC 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px black;
+  -webkit-text-stroke: 1px #ffffff00;
   opacity: 1;
-  transition: all 2s ease-in-out;
+  padding: 1px;
+  transition: all 450ms ease;
 }
 
 input[type=checkbox].fa-solid.fa-heart + label::before {
   content: "\f004";
-  transition: all 2s ease-in-out;
-}
-
-input[type=checkbox].fa-solid:unchecked + label::before {
-  background: white;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px black;
-  opacity: 1;
-  transition: all 2s ease-in-out;
 }
 
 .logo {
