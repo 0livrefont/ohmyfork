@@ -15,6 +15,7 @@ header {
 
 .header_img {
   width: 100%;
+  height: 275px;
 }
 
 section {
@@ -82,6 +83,15 @@ p {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+hr {
+  height: 3px;
+  background-color: #99E2D0;
+  color: #99E2D0;
+  width: 42px;
+  border : none;
+  margin: -15px 0 0 0;
 }
 
 /*Détails*/
@@ -204,7 +214,54 @@ li {
 
 /*Menu*/
 .carte-part {
+  opacity: 0;
   padding: 10px;
+  animation: fadein 1s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+
+.carte-part2 {
+  opacity: 0;
+  padding: 10px;
+  animation: fadein 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+
+.carte-part3 {
+  opacity: 0;
+  padding: 10px;
+  animation: fadein 1s;
+  animation-delay: 0.8s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
 }
 
 .proposition {
@@ -238,9 +295,6 @@ li {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  /*    &:selected + .prix {
-          margin-right: 0;
-      }*/
 }
 .plat:hover + .prix {
   margin-right: 0;

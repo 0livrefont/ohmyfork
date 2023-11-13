@@ -67,6 +67,72 @@ a {
   padding: 25px 20px 40px 20px;
 }
 
+/*Loader*/
+
+.loader {
+  width: 100%;
+  height: 100%;
+  z-index:9999;
+  position:fixed;
+  background: white 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  animation: end-loader 0s 3s both;
+}
+
+.loader div {
+  display: inline-block;
+  position: relative;
+  width: 2px;
+  animation: loader-omf 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.loader div:nth-child(1) {
+  left: -32px;
+  animation-delay: -0.24s;
+  background: #9356DC;
+}
+
+.loader div:nth-child(2) {
+  left: 0px;
+  animation-delay: -0.12s;
+  background: #FF79DA;
+}
+
+.loader div:nth-child(3) {
+  left: 32px;
+  animation-delay: 0;
+  background: #99E2D0;
+}
+
+@keyframes loader-omf {
+  0% {
+    height: 33px;
+    width: 3px;
+  }
+  50%, 99% {
+    height: 5px;
+    width: 3px;
+  }
+  100% {
+  opacity: 0;
+  }
+}
+
+@keyframes end-loader {
+  0% {
+    transform: translateX(0);
+  }
+  85%,100% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-9999px);
+  }
+}
+
 /*Détails*/
 
 .fa-solid {
@@ -208,9 +274,6 @@ li {
   font-weight: bold;
 }
 
-/*.fonct_button:hover {
-
-}*/
 .txt-button {
   margin: 5%;
 }
@@ -247,6 +310,7 @@ li {
   border-radius: 25px;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .card-img {
@@ -277,13 +341,6 @@ li {
   margin: -50px 10px 20px 0;
 }
 
-.new-container {
-  width: 90%;
-  height: 33%;
-  position: absolute;
-  display: inline-grid;
-}
-
 .new {
   color: #008766;
   background-color: #99E2D0;
@@ -291,10 +348,10 @@ li {
   padding: 5px;
   position: absolute;
   z-index: 1;
-  margin: 20px 20px 0 0;
   font-weight: bold;
   font-size: 14px;
-  justify-self: end;
+  top: 20px;
+  right: 20px;
 }
 
 /*footer*/
@@ -341,6 +398,7 @@ footer {
     align-items: start;
     width: 90%;  
   }
+
   ul {
     width: 100%;
     display: flex;
@@ -348,9 +406,11 @@ footer {
     justify-content: space-evenly;
     width: 100%;
   }
+
   li {
     width: 335px;
   }
+
   .card-container {
     max-width: 1440px;
     flex-wrap: wrap;
@@ -359,24 +419,23 @@ footer {
     padding: 0;
     gap: 60px;
   }
+
   .restaurants {
     align-items: center;
   }
+
   .fonctionnement {
    align-items: center;
   }
+
   .card {
     width: 490px;
   }
+
   .card-loving {
     margin: -48px 10px 20px 0;
   }
-  .new-container {
-    display: flex;
-  }
-  .new {
-    margin: 10px 0 0 410px;
-  }
+
   footer {
     padding-bottom: 0;
     display: flex;
@@ -384,15 +443,18 @@ footer {
     align-items: center;
     justify-content: flex-start;
   }
+
   .foot_ul {
     width: auto;
     margin-right: 30px;
   }
+
   .foot-menu {
     padding: 5px 15px;
     justify-content: right;
     width: auto;
   }
+
   .fa-solid {
     position: relative;
     margin: 0;
