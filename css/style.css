@@ -56,6 +56,7 @@ h2 {
 h4 {
   margin: 2px;
   position: relative;
+  font-size: 0;
 }
 
 a {
@@ -103,7 +104,7 @@ a {
 
 .loader div:nth-child(3) {
   left: 32px;
-  animation-delay: 0;
+  animation-delay: 0s;
   background: #99E2D0;
 }
 
